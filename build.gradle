@@ -1,8 +1,16 @@
+plugins {
+    id "groovy"
+    id "maven"
+    id "maven-publish"
+    id "pl.allegro.tech.build.axion-release" version "1.3.3"
+    id "com.jfrog.bintray" version "1.7.3"
+}
+
 group = artifact_group
 version = "${artifact_version}.${build_number}"
 
-apply plugin: 'groovy'
-apply plugin: 'maven'
+def props = new Properties()
+file("./bintray.properties").withInputStream { props.load(it) }
 
 repositories {
     mavenCentral()
@@ -13,5 +21,40 @@ dependencies {
     compile localGroovy()
 }
 
+scmVersion {
+    tag {
+        prefix = 'applivery-android-gradle-plugin-release'
+    }
+}
+
 sourceCompatibility = 1.7
 targetCompatibility = 1.7
+
+bintray {
+    user = props.getProperty("BINTRAY_USER")
+    key = props.getProperty("BINTRAY_API_KEY")
+    publications = ['plugin']
+    pkg {
+        repo = "Maven"
+        name = "$project.group:$project.name"
+        userOrg = "mrebollob"
+        version {
+            name = "$project.version"
+        }
+    }
+}
+
+publishing {
+    publications {
+        plugin(MavenPublication) {
+            from components.java
+
+            artifact sourcesJar
+        }
+    }
+}
+
+task sourcesJar(type: Jar) {
+    classifier = 'sources'
+    from sourceSets.main.allSource
+}

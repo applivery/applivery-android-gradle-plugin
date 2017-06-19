@@ -3,12 +3,13 @@
 This project is a [gradle](https://gradle.org/) plugin to deploy your apk in [Applivery](https://www.applivery.com).
 
 ## Usage
+
+Config applivery plugin
 ```groovy
 buildscript {
   repositories {
     ...
     jcenter()
-    mavenLocal()
   }
   dependencies {
     ...
@@ -24,6 +25,12 @@ applivery {
     apiKey = [your api key]
 }
 ```
+
+Execute deploy task
+```
+./gradlew appliveryDeploy
+```
+
 
 ## About Applivery.com
 
