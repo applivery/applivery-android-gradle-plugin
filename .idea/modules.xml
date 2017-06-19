@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/applivery-deploy.iml" filepath="$PROJECT_DIR$/.idea/modules/applivery-deploy.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/applivery-deploy_main.iml" filepath="$PROJECT_DIR$/.idea/modules/applivery-deploy_main.iml" group="applivery-deploy" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/applivery-deploy_test.iml" filepath="$PROJECT_DIR$/.idea/modules/applivery-deploy_test.iml" group="applivery-deploy" />
+    </modules>
+  </component>
+</project>
