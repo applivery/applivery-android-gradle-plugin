@@ -27,9 +27,9 @@ applivery {
 
 ## About Applivery.com
 
-With [Applivery.com](https://www.applivery.com) you can easily distribute your iOS and Android Apps throughout a customizable platform with no need of your users have to be registered on it.
+With [Applivery.com](https://www.applivery.com) you can easily distribute your Android Apps throughout a customizable platform with no need of your users have to be registered on it.
 
-**The main purpose of this plugin is to upload a new iOS or Android build to [Applivery.com](https://www.applivery.com).**
+**The main purpose of this plugin is to upload a new Android build to [Applivery.com](https://www.applivery.com).**
 
 If you usually use Fastlane tools to automate the most common development tasks now you can start using out Fastlane Plugin to easily deploy new Android versions of your Apps to Applivery and close your development the cycle: Build, Test & deploy like a pro!
 
