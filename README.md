@@ -10,9 +10,6 @@ buildscript {
   repositories {
     ...
     jcenter()
-    maven {
-        url "http://dl.bintray.com/mrebollob/Maven"
-    }
   }
   dependencies {
     ...
